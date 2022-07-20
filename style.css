@@ -5,6 +5,23 @@
 .sub-judul{
     margin: 0;
 }
+.list{
+    width: auto;
+    display: flex;
+    /* text-decoration: line-through; */
+}
+/* .activity{
+    width: 80%;
+}
+.check{
+    width: 10%;
+} */
+
+.check:checked + label{
+    text-decoration: line-through;
+    color: gray;
+}
+
 h1{
     margin: 0,0;
 }
