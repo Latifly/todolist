@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TO DO List</title>
     <link rel="stylesheet" href="style.css" />
+    <script defer src="index.js"></script>
   </head>
   <body>
     <div class="judul">
@@ -13,18 +14,24 @@
       <p class="sub-judul">Make Your Life in Order</p>
       <hr />
     </div>
-    <h2>Your List:</h2>
-    <ol>
-      <article class="list">
+    <section>
+      <h2>Your List:</h2>
+      <ol>
+        <article class="list">
+          <li class="activity">
+            <input type="checkbox" class="check" id="check" />
+            <label for="check">show dummy data on page</label>
+          </li>
+        </article>
         <li class="activity">
           <input type="checkbox" class="check" id="check" />
-          <label for="check">show dummy data on page</label>
+          <label for="check">strike when done</label>
         </li>
-      </article>
-      <li class="activity">
-        <input type="checkbox" class="check" id="check" />
-        <label for="check">strike when done</label>
-      </li>
-    </ol>
+      </ol>
+    </section>
+
+    <section>
+      <div id="list-data" />
+    </section>
   </body>
 </html>
