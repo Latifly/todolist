@@ -1,13 +1,17 @@
 const displayList = document.querySelector("#list-data");
 displayList.textContent = "test";
 
-fetch("./data.json")
-  .then((response) => {
-    return response.json();
-  })
-  .then((jsondata) => {
-    console.log(typeof jsondata);
-    console.log(jsondata);
+async function getjson() {
+  const response = await fetch("./data.json");
+  // const data = await response.json();
+  const { data } = await response.json();
+  console.log(data);
+  console.log(data[0].name);
 
-    displayList.innerHTML = jsondata[0];
-  });
+  for (var name in data) {
+    displayList.textContent += data[name].name;
+    console.log(data[name].name);
+  }
+}
+
+getjson();
