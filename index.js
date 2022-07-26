@@ -3,15 +3,23 @@ displayList.textContent = "test";
 
 async function getjson() {
   const response = await fetch("./data.json");
-  // const data = await response.json();
   const { data } = await response.json();
-  console.log(data);
-  console.log(data[0].name);
 
-  for (var name in data) {
-    displayList.textContent += data[name].name;
-    console.log(data[name].name);
-  }
+  document.getElementById("list-data").innerHTML = `<ol>
+  ${data
+    .map(function (data) {
+      return `
+      <li>
+        <input type="checkbox" class="check" id="check" ${
+          data.status === "done" ? "checked" : ""
+        }/>
+        <label for="check">${data.name}</label>
+      </li>
+      `;
+    })
+    .join("")}
+    </ol>
+    `;
 }
 
 getjson();

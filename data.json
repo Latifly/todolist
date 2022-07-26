@@ -6,19 +6,19 @@
       "status": "todo"
     },
     {
-      "id": 2,
+      "id": 2,  
       "name": "learn CSS",
       "status": "done"
     },
     {
       "id": 3,
       "name": "learn javascript",
-      "status": "todo"
+      "status": "done"
     },
     {
       "id": 4,
       "name": "learn framework",
-      "status": "todo"
+      "status": "done"
     },
     {
       "id": 5,
