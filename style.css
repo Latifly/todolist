@@ -1,6 +1,18 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: min(100%, 500px);
+    margin-inline: auto;
+    background-color: #fce2db;
+}
 .judul {
     text-align: center;
-    background-color: rgb(235, 123, 209);
+    background-color: #B270A2;
+    margin-bottom: 1rem;
 }
 .sub-judul{
     margin: 0;
@@ -8,14 +20,8 @@
 .list{
     width: auto;
     display: flex;
-    /* text-decoration: line-through; */
 }
-/* .activity{
-    width: 80%;
-}
-.check{
-    width: 10%;
-} */
+
 
 .check:checked + label{
     text-decoration: line-through;
@@ -24,4 +30,35 @@
 
 h1{
     margin: 0,0;
+}
+
+form{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 1rem;
+}
+
+.input-todo{
+    border-radius: 25px;
+    padding: 1rem;
+    margin: 5px;
+    width: 70%;
+    background-color: #fce2db;
+}
+
+.submit-todo{
+    border-radius: 25px;
+    padding: 1rem;
+    margin: 5px;
+    width: 25%;
+    background-color: #B270A2;
+}
+
+ul{
+    border: 1px #ff8fb1 solid;
+    list-style-type: none;
+}
+
+li{
+    margin-bottom: 1rem;
 }

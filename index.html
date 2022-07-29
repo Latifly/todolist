@@ -7,6 +7,13 @@
     <title>TO DO List</title>
     <link rel="stylesheet" href="style.css" />
     <script defer src="index.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
     <div class="judul">
@@ -14,6 +21,21 @@
       <p class="sub-judul">Make Your Life in Order</p>
       <hr />
     </div>
+
+    <form>
+      <input
+        type="text"
+        class="input-todo"
+        id="input-todo"
+        placeholder="Add To Do"
+      />
+      <button type="submit" id="btn-submit" class="submit-todo">
+        Add to List
+      </button>
+    </form>
+
+    <ul id="todo-list"></ul>
+
     <section>
       <h2>Your List:</h2>
       <ol>
