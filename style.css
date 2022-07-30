@@ -56,9 +56,20 @@ form{
 
 ul{
     border: 1px #ff8fb1 solid;
+    border-radius: 10px;
     list-style-type: none;
+    font-size: 2rem;
+    padding: 1rem;
+
 }
 
 li{
-    margin-bottom: 1rem;
+    margin-block-end: 2rem;
+}
+
+.btn-status{
+    font-size: 1rem;
+    padding: .5rem 1rem;
+    border-radius: 10px;
+    background-color: #B270A2;
 }

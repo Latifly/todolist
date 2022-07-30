@@ -1,4 +1,5 @@
 const displayList = document.querySelector("#list-data");
+const button = document.querySelectorAll("button");
 
 let listTodo = [];
 
@@ -40,7 +41,8 @@ const showList = () => {
           
         </div>
         <div>
-          <input type="button" />
+          <button class="btn-status" data-value="done">Done</button>
+          <button class="btn-status">In Progress</button>
         </div>
       
       </li>`;
