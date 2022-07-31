@@ -1,5 +1,4 @@
 const displayList = document.querySelector("#list-data");
-const button = document.querySelectorAll("button");
 
 let listTodo = [];
 
@@ -27,10 +26,10 @@ async function getjson() {
 const showList = () => {
   document.getElementById("todo-list").innerHTML = `
   ${listTodo
-    .map((lt) => {
+    .map((lt, index) => {
       return `
       <li class="list-activity">
-        <div>
+        <div class="list-container">
           ${lt.activity} ${
         lt.status === "todo"
           ? '<i class="fa-solid fa-list-check"></i>'
@@ -41,8 +40,8 @@ const showList = () => {
           
         </div>
         <div>
-          <button class="btn-status" data-value="done">Done</button>
-          <button class="btn-status">In Progress</button>
+        <button onclick="updateStatus(${index},'done')" type="button"  class="btn-status">Done </button>
+        <button onclick="updateStatus(${index},'progress')" type="button" class="btn-status">In Progress</button>
         </div>
       
       </li>`;
@@ -59,6 +58,11 @@ const addList = (ev) => {
   listTodo.push(activity);
   document.querySelector("form").reset();
   console.log(listTodo);
+  showList();
+};
+
+const updateStatus = (index, status) => {
+  listTodo[index].status = status;
   showList();
 };
 

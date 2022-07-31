@@ -13,6 +13,7 @@ body{
     text-align: center;
     background-color: #B270A2;
     margin-bottom: 1rem;
+    padding-bottom: 1rem;
 }
 .sub-judul{
     margin: 0;
@@ -36,21 +37,22 @@ form{
     display: flex;
     flex-wrap: wrap;
     margin: 1rem;
+    
 }
 
 .input-todo{
     border-radius: 25px;
-    padding: 1rem;
+    padding: 1rem 1.25rem;
     margin: 5px;
-    width: 70%;
+    flex: 1;
     background-color: #fce2db;
 }
 
 .submit-todo{
     border-radius: 25px;
+    font-weight: 600;
     padding: 1rem;
     margin: 5px;
-    width: 25%;
     background-color: #B270A2;
 }
 
@@ -60,11 +62,20 @@ ul{
     list-style-type: none;
     font-size: 2rem;
     padding: 1rem;
+    margin-block-start: 2rem;
+    
 
 }
 
 li{
     margin-block-end: 2rem;
+}
+
+.list-container{
+    /* width: 100%; */
+    display: flex;
+    align-items: center;
+    gap: 1rem;
 }
 
 .btn-status{
